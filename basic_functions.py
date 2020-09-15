@@ -85,3 +85,20 @@ def determine_mode(arr):
             return "str"
     else:
         return "mixed"
+
+def median(arr):
+    """
+    Returns the median of a given array or the middle element of an array
+    """
+    if(len(arr) % 2 == 1):
+        return arr[len(arr)//2]
+    else:
+        return (arr[len(arr)/2 - 1] + arr[len(arr)/2])/2
+
+def mode(arr):
+    """
+    Returns the mode of a given array
+    Note that this function is different from the above determine_mode() function
+    This returns the most common element in a given set
+    """
+    return highest_frequency(arr)[0]
