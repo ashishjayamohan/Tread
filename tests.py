@@ -1,5 +1,7 @@
 import basic_functions as bf
 import graphing_functions as gf
+import file_processing_functions as fpf
+import table_functions as tf
 
 def check(real = 0, predicted = 0, test_number = 0, function_name = "Null Test"):
     if(str(real) == str(predicted)):
