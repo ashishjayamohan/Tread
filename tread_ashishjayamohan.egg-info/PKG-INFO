@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tread-ashishjayamohan
+Version: 0.0.1
+Summary: A tiny data science package.
+Home-page: https://github.com/ashishjayamohan/Tread
+Author: Ashish Jayamohan
+Author-email: ashishjayamohan@gmail.com
+License: UNKNOWN
+Description: Nothing here for right now
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
