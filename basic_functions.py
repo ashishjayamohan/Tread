@@ -57,7 +57,7 @@ def highest_frequency(arr):
             dictionary[j] += 1
         else:
             dictionary[j] = 1
-    max_value = -10
+    max_value = dictionary[0]
     max_key = ""
     for a in dictionary:
         if(dictionary[a] > max_value):
