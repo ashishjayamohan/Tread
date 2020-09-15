@@ -9,7 +9,7 @@ setuptools.setup(
     author="Ashish Jayamohan",
     author_email="ashishjayamohan@gmail.com",
     description="A tiny data science package.",
-    long_description="Nothing here for right now",
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ashishjayamohan/Tread",
     packages=setuptools.find_packages("numpy", "matplotlib"),
