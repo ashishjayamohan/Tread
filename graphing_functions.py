@@ -23,7 +23,7 @@ def graph_frequency_histogram(arr):
 
 def graph_scatter(arr):
     """
-    This dunction returns a scatter plot of the given data
+    This function returns a scatter plot of the given data
     Note that input array must be an array of array with each sub-array
     having two elements: [x,y] for the respective point
     """
