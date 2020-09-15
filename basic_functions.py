@@ -51,12 +51,7 @@ def highest_frequency(arr):
     This function looks for the number of occurrences of each value in the given array and returns the top results
     Returned array has the structure: [value with highest frequency, number of occurrences of value]
     """
-    dictionary = {}
-    for j in arr:
-        if(j in dictionary):
-            dictionary[j] += 1
-        else:
-            dictionary[j] = 1
+    dictionary = frequency(arr)
     max_value = dictionary[0]
     max_key = ""
     for a in dictionary:
