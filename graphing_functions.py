@@ -29,8 +29,10 @@ def graph_scatter(arr, color='green', title='Scatter Plot of Given Points', x_la
     """
     plt.style.use('ggplot')
 
-    x = [i[0] for i in arr]
-    y = [i[1] for i in arr]
+    x, y = [], []
+    for point in arr:
+        x.append(point[0])
+        y.append(point[1])
 
     fig = plt.figure()
     axes = fig.add_axes([0,0,1,1])
