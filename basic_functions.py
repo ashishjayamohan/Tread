@@ -24,7 +24,7 @@ def add(arr, mode = "mixed"):
             sum += float(str(j))
         return sum
     else:
-        print('Function has failed. Incorrect data type.')
+        raise TypeError('Add failed - Incorrect data type.')
 
 def average(arr, mode = "mixed"):
     """
