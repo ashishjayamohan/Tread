@@ -45,9 +45,11 @@ def run_all():
     test_determine_mode_advanced()
 
     print("----------------------------------")
-    print("BEGINNING GRAPH CHECK")
+    print("BEGINNING HISTOGRAM CHECK")
     test_graph_frequency_histogram()
+    print("HISTOGRAM CHECK COMPLETE")
+    print("BEGINNING SCATTER PLOT CHECK")
     test_graph_scatter()
-    print("GRAPH CHECK COMPLETE")
+    print("SCATTER PLOT CHECK COMPLETE")
 
 run_all()
