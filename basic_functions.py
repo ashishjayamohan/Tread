@@ -21,11 +21,10 @@ def add(arr, mode = "mixed"):
     elif(mode == "mixed"):
         sum = 0
         for j in arr:
-            summand = float(str(j))
-            sum += summand
+            sum += float(str(j))
         return sum
     else:
-        print('Function has failed. Incorrect data type.')
+        raise TypeError('Add failed - Incorrect data type.')
 
 def average(arr, mode = "mixed"):
     """
@@ -33,17 +32,14 @@ def average(arr, mode = "mixed"):
     Once again, the modes of add() can be used here to denote what the type of the array is
     The function below, determine_mode(arr) can be used to determine the correct mode for your array
     """
-    sum = add(arr, mode)
-    answer = sum/len(arr)
-    return answer
+    return add(arr, mode)/len(arr)
 
 def types(arr):
     """
     types(arr) will return an array of length equivalent to that of the input array
     This is analogous to the type() function typically carried out on a singular variable
     """
-    types = [type(a) for a in arr]
-    return types
+    return [type(a) for a in arr]
 
 def highest_frequency(arr):
     """
@@ -51,13 +47,8 @@ def highest_frequency(arr):
     This function looks for the number of occurrences of each value in the given array and returns the top results
     Returned array has the structure: [value with highest frequency, number of occurrences of value]
     """
-    dictionary = {}
-    for j in arr:
-        if(j in dictionary):
-            dictionary[j] += 1
-        else:
-            dictionary[j] = 1
-    max_value = -10
+    dictionary = frequency(arr)
+    max_value = dictionary[0]
     max_key = ""
     for a in dictionary:
         if(dictionary[a] > max_value):
@@ -84,8 +75,7 @@ def determine_mode(arr):
     Note that mixed does not check explicitly for mixed cases and may return an error at runtime if array
     elements are of unparseable types
     """
-    type_arr = types(arr)
-    dictionary = frequency(type_arr)
+    dictionary = frequency(types(arr))
     if(len(dictionary) == 1):
         if("int" in str(dictionary.keys())):
             return "int"

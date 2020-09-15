@@ -10,10 +10,7 @@ def remove_column(table, index):
     return table
 
 def extract_column(table, index):
-    arr = []
-    for j in table:
-        arr.append(j[index])
-    return arr
+    return [j[index] for j in table]
     
 def vector_function_column(table, function, index):
     for j in range(len(table)):
