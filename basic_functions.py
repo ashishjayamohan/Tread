@@ -48,7 +48,7 @@ def highest_frequency(arr):
     Returned array has the structure: [value with highest frequency, number of occurrences of value]
     """
     dictionary = frequency(arr)
-    max_value = dictionary[0]
+    max_value = -1
     max_key = ""
     for a in dictionary:
         if(dictionary[a] > max_value):
