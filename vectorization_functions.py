@@ -11,6 +11,7 @@ def cumulative_sum(arr):
         current_val += j
         answer.append(current_val)
     return answer
+
 def skew(arr, mode = "float"):
     """
     This function calculates the skew of a given array
@@ -19,3 +20,9 @@ def skew(arr, mode = "float"):
     average = bf.average(arr, mode)
     answer = (bf.add([(average - i) ** 2 for i in arr], mode) / len(arr)) ** (1/2)
     return answer
+
+def vector_function(arr, function):
+    """
+    Applies a given function upon every element in a given array
+    """
+    return [function(j) for j in arr]
