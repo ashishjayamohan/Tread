@@ -24,7 +24,7 @@ def add(arr, mode = "mixed"):
             sum += float(str(j))
         return sum
     else:
-        raise TypeError('Add failed - Incorrect data type.')
+        raise TypeError('Add failed - Incorrect data type')
 
 def average(arr, mode = "mixed"):
     """
@@ -58,7 +58,8 @@ def highest_frequency(arr):
 
 def frequency(arr):
     """
-    frequency() returns a dictionary with keys set as elements from the array and values as their respective frequencies
+    frequency() returns a dictionary with keys set as elements from the array
+    and values as their respective frequencies
     Frequency is determined as the number of times occurred in given array
     """
     dictionary = {}
@@ -90,10 +91,11 @@ def median(arr):
     """
     Returns the median of a given array or the middle element of an array
     """
-    if(len(arr) % 2 == 1):
-        return arr[len(arr)//2]
+    sample = sorted(arr)
+    if(len(sample) % 2 == 1):
+        return sample[len(sample) // 2]
     else:
-        return (arr[len(arr)/2 - 1] + arr[len(arr)/2])/2
+        return (sample[len(sample)/2 - 1] + sample[len(sample)/2]) / 2
 
 def mode(arr):
     """
