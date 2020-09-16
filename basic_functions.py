@@ -104,3 +104,9 @@ def mode(arr):
     This returns the most common element in a given set
     """
     return highest_frequency(arr)[0]
+
+def get_length(arr):
+    """
+    Returns the length of a given array
+    """
+    return len(arr)
