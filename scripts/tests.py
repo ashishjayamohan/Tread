@@ -63,6 +63,16 @@ def test_average():
     check(bf.average(average2), 2.0, 'AVERAGE - 2 elements')
     check(bf.average(average3), 19.25, 'AVERAGE - Many elements, mixed types')
 
+def test_types():
+    types1 = [2]
+    types2 = [2, '3']
+    types3 = [4, 4.0, '4']
+    types4 = [-300000, 32768.1, '25624642']
+    check(bf.types(types1), [type(2)], 'TYPES - 1 element')
+    check(bf.types(types2), [type(2), type('3')], 'TYPES - 2 elements')
+    check(bf.types(types3), [type(4), type(4.0), type('4')], 'TYPES - 3 elements')
+    check(bf.types(types4), [type(-3000000), type(32768.1), type('25624642')], 'TYPES - Large inputs')
+
 def run_all():
     print('Test #1')
     test_add()
@@ -80,6 +90,8 @@ def run_all():
     test_determinant()
     print('Test #8')
     test_average()
+    print('Test #9')
+    test_types()
 
     print("----------------------------------")
     print("BEGINNING HISTOGRAM CHECK")
