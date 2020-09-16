@@ -26,3 +26,17 @@ def vector_function(arr, function):
     Applies a given function upon every element in a given array
     """
     return [function(j) for j in arr]
+
+def cast_all(arr, final_type = "int"):
+    """
+    Casts all elements in a given array to specified data type
+    Raises a type error if type is not found
+    """
+    if(final_type == "int"):
+        return [int(i) for i in arr]
+    elif(final_type == "float"):
+        return [float(i) for i in arr]
+    elif(final_type == "str"):
+        return [str(i) for i in arr]
+    else:
+        raise TypeError('Cast Failed - Incorrect data type')
