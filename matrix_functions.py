@@ -1,22 +1,48 @@
-def determinant(matrix):
-    if len(matrix) != len(matrix[0]):
+from itertools import tee
+
+def determinant(matrix, __len=None, __nocheck=False):
+    if (not __nocheck) and len(matrix) != len(matrix[0]):
         raise TypeError('Table must be a square')
     else:
-        size = len(matrix)
+        size = (__len or len(matrix))
         if size == 1:
-            return matrix[0][0]
-        else:
-            newmatrix = matrix[1:]
+            return list(matrix)[0][0]
+        elif size == 2:
+            matrixlist = list(matrix)
+            return matrixlist[0][0]*matrixlist[1][1]-matrixlist[1][0]*matrixlist[0][1]
+        elif size == 3:
+            matrixlist = list(matrix)
             ret = 0
-            for i in range(size):
-                element = matrix[0][i]
-                minor = list(row[0:i] + row[i + 1 : size] for row in newmatrix)
-                minor_determinant = determinant(minor)
-                if i % 2 == 0:
-                    ret += element * minor_determinant
-                else:
-                    ret -= element * minor_determinant
+            actual_size = len(matrixlist[0])
+            for i in range(actual_size):
+                ret += matrixlist[0][i]*matrixlist[1][(i+1) % actual_size]*matrixlist[2][(i+2) % actual_size]
+            for i in range(actual_size):
+                ret -= matrixlist[2][i]*matrixlist[1][(i+1) % actual_size]*matrixlist[0][(i+2) % actual_size]
             return ret
+        else:
+            ret = 0
+            if isinstance(matrix, list):
+                for i in range(size):
+                    element = matrix[0][i]
+                    recurse_generator = (row[0:i] + row[i + 1 : size] for row in matrix)
+                    next(recurse_generator)
+                    minor_determinant = determinant(recurse_generator, __len=len(matrix)-1, __nocheck=True)
+                    if i % 2 == 0:
+                        ret += element * minor_determinant
+                    else:
+                        ret -= element * minor_determinant
+                return ret
+            else:
+                start_row = next(matrix)
+                new_iterators = tee(matrix, size)
+                for i in range(size):
+                    element = start_row[i]
+                    minor_determinant = determinant((row[0:i] + row[i + 1 : size] for row in new_iterators[i]), __len=__len-1, __nocheck=True)
+                    if i % 2 == 0:
+                        ret += element * minor_determinant
+                    else:
+                        ret -= element * minor_determinant
+                return ret
 
 
 def make_matrix(old_matrix):
