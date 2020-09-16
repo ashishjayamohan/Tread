@@ -19,24 +19,20 @@ def determinant(matrix):
             return ret
 
 
-def multiply(matrix1, matrix2):
-    new_matrix1 = []
-    new_matrix2 = []
-    if not (isinstance(matrix1[0], list)):
-        new_matrix1 = [[float(item) for item in matrix1]]
+def make_matrix(old_matrix):
+    new_matrix = [];
+    if not (isinstance(old_matrix[0], list)):
+        new_matrix = [[float(item) for item in old_matrix]]
     else:
-        for x in range(len(matrix1)):
-            new_matrix1.append([])
-            for y in range(len(matrix1[x])):
-                new_matrix1[x].append(float(matrix1[x][y]))
+        for x in range(len(old_matrix)):
+            new_matrix.append([])
+            for y in range(len(old_matrix[x])):
+                new_matrix[x].append(float(old_matrix[x][y]))
+    return new_matrix
 
-    if not (isinstance(matrix2[0], list)):
-        new_matrix2 = [[float(item) for item in matrix2]]
-    else:
-        for x in range(len(matrix2)):
-            new_matrix2.append([])
-            for y in range(len(matrix2[x])):
-                new_matrix2[x].append(float(matrix2[x][y]))
+def multiply(matrix1, matrix2):
+    new_matrix1 = make_matrix(matrix1)
+    new_matrix2 = make_matrix(matrix2)
     if len(new_matrix1[0]) != len(new_matrix2):
         raise TypeError(
             f"Cannot multiply matrices of the size {len(new_matrix1)} x {len(new_matrix1[0])} and {len(new_matrix2)} x {len(new_matrix2[0])}"
@@ -52,23 +48,8 @@ def multiply(matrix1, matrix2):
 
 
 def element_wise_multiply(matrix1, matrix2):
-    new_matrix1 = []
-    new_matrix2 = []
-    if not (isinstance(matrix1[0], list)):
-        new_matrix1 = [[float(item) for item in matrix1]]
-    else:
-        for x in range(len(matrix1)):
-            new_matrix1.append([])
-            for y in range(len(matrix1[x])):
-                new_matrix1[x].append(float(matrix1[x][y]))
-
-    if not (isinstance(matrix2[0], list)):
-        new_matrix2 = [[float(item) for item in matrix2]]
-    else:
-        for x in range(len(matrix2)):
-            new_matrix2.append([])
-            for y in range(len(matrix2[x])):
-                new_matrix2[x].append(float(matrix2[x][y]))
+    new_matrix1 = make_matrix(matrix1)
+    new_matrix2 = make_matrix(matrix2)
     if len(new_matrix1) != len(new_matrix2) or len(new_matrix1[0]) != len(new_matrix2[0]):
         raise TypeError(
             f"Cannot point-wise multiply matrices of the size {len(new_matrix1)} x {len(new_matrix1[0])} and {len(new_matrix2)} x {len(new_matrix2[0])}"
