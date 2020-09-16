@@ -1,7 +1,6 @@
 import scripts.basic_functions as bf
 import scripts.graphing_functions as gf
 import scripts.file_processing_functions as fpf
-import scripts.table_functions as tf
 import scripts.vectorization_functions as vf
 import scripts.matrix_functions as mf
 
@@ -54,6 +53,15 @@ def test_determinant():
     check(mf.determinant(matrix3), 0, "DETERMINANT - 3x3 Matrix")
     check(mf.determinant(matrix4), -1008848, "DETERMINANT - 5x5 Irregular Matrix")
 
+def test_average():
+    average1a = [2]
+    average1b = [2.2]
+    average2 = [1,3]
+    average3 = [6,2,5,27,'75',1.0,6,32]
+    check(bf.average(average1a), 2.0, 'AVERAGE - 1 element (integer)')
+    check(bf.average(average1b), 2.2, 'AVERAGE - 1 element (float)')
+    check(bf.average(average2), 2.0, 'AVERAGE - 2 elements')
+    check(bf.average(average3), 19.25, 'AVERAGE - Many elements, mixed types')
 
 def run_all():
     print('Test #1')
@@ -71,6 +79,7 @@ def run_all():
     print('Test #7')
     test_determinant()
     print('Test #8')
+    test_average()
 
     print("----------------------------------")
     print("BEGINNING HISTOGRAM CHECK")
