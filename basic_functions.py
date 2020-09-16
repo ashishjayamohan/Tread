@@ -56,7 +56,7 @@ def highest_frequency(arr):
             max_value = dictionary[a]
     return [max_key, max_value]
 
-def frequency(arr):
+def frequency(arr, cast=False):
     """
     frequency() returns a dictionary with keys set as elements from the array
     and values as their respective frequencies
@@ -64,10 +64,10 @@ def frequency(arr):
     """
     dictionary = {}
     for j in arr:
-        if(j in dictionary):
-            dictionary[j] += 1
+        if((float(j) if cast else j) in dictionary):
+            dictionary[(float(j) if cast else j)] += 1
         else:
-            dictionary[j] = 1
+            dictionary[(float(j) if cast else j)] = 1
     return dictionary
 
 def determine_mode(arr):
