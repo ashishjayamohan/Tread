@@ -103,6 +103,8 @@ def run_all():
     test_average()
     print('Test #9')
     test_types()
+    print('Test #10')
+    test_frequency()
 
     print("----------------------------------")
     print("BEGINNING HISTOGRAM CHECK")
