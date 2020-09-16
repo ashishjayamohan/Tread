@@ -1,6 +1,6 @@
 def determinant(matrix):
     if len(matrix) != len(matrix[0]):
-        raise TypeError("Table must be a square")
+        raise TypeError('Table must be a square')
     else:
         size = len(matrix)
         if size == 1:
