@@ -73,6 +73,17 @@ def test_types():
     check(bf.types(types3), [type(4), type(4.0), type('4')], 'TYPES - 3 elements')
     check(bf.types(types4), [type(-3000000), type(32768.1), type('25624642')], 'TYPES - Large inputs')
 
+def test_frequency():
+    freq1 = [2]
+    freq2 = [2, '2', 2.0]
+    freq3 = [1, 2, 3, 3, 4, 4, 4]
+    freq4 = [64214.0, -15213, '1563', 64214.0]
+    check(bf.frequency(freq1), {2: 1}, 'FREQUENCY - 1 element')
+    check(bf.frequency(freq2, cast=False), {2: 2, '2': 1}, 'FREQUENCY - same value, different types (cast=False)')
+    check(bf.frequency(freq2, cast=False), {2.0: 3}, 'FREQUENCY - same value, different types (cast=True)')
+    check(bf.frequency(freq3), {1: 1, 2: 1, 3: 2, 4: 3}, 'FREQUENCY - 7 elements')
+    check(bf.frequency(freq4), { 64214.0: 2, -15213: 1, '1563': 1}, 'FREQUENCY - Large inputs')
+
 def run_all():
     print('Test #1')
     test_add()
