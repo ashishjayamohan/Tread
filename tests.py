@@ -84,6 +84,16 @@ def test_frequency():
     check(bf.frequency(freq3), {1: 1, 2: 1, 3: 2, 4: 3}, 'FREQUENCY - 7 elements')
     check(bf.frequency(freq4), { 64214.0: 2, -15213: 1, '1563': 1}, 'FREQUENCY - Large inputs')
 
+def test_mode():
+    mode1 = [1]
+    mode2 = [1,2,3]
+    mode3 = [1,1,2,3]
+    mode4 = [1,6,24,62,2,3563,1]
+    check(bf.mode(mode1), 1, 'MODE - 1 element')
+    check(bf.mode(mode2), None, 'MODE - Uniform dataset')
+    check(bf.mode(mode3), 1, 'MODE - 4 elements')
+    check(bf.mode(mode4), 1, 'MODE - Large dataset')
+
 def run_all():
     print('Test #1')
     test_add()
@@ -105,6 +115,8 @@ def run_all():
     test_types()
     print('Test #10')
     test_frequency()
+    print('Test #11')
+    test_mode()
 
     print("----------------------------------")
     print("BEGINNING HISTOGRAM CHECK")
