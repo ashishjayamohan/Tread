@@ -43,18 +43,12 @@ def types(arr):
 
 def highest_frequency(arr):
     """
-    highest_frequency(arr) returns an array of length 2
+    highest_frequency(arr) returns a tuple of the form ((items with most frequency), their frequency)
     This function looks for the number of occurrences of each value in the given array and returns the top results
-    Returned array has the structure: [value with highest frequency, number of occurrences of value]
     """
     dictionary = frequency(arr)
-    max_value = -1
-    max_key = ""
-    for a in dictionary:
-        if(dictionary[a] > max_value):
-            max_key = a
-            max_value = dictionary[a]
-    return [max_key, max_value]
+    max_value = max(dictionary.values())
+    return (tuple(key for key, value in dictionary.items() if value == max_value), max_value)
 
 def frequency(arr, cast=False):
     """
@@ -103,7 +97,8 @@ def mode(arr):
     Note that this function is different from the above determine_mode() function
     This returns the most common element in a given set
     """
-    return highest_frequency(arr)[0]
+    freqs = highest_frequency(arr)
+    return None if len(freqs[0]) > 1 else freqs[0][0]
 
 def length(arr):
     """
