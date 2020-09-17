@@ -95,7 +95,7 @@ def median(arr):
     if(len(sample) % 2 == 1):
         return sample[len(sample) // 2]
     else:
-        return (sample[len(sample)/2 - 1] + sample[len(sample)/2]) / 2
+        return (sample[len(sample)//2 - 1] + sample[len(sample)//2]) / 2
 
 def mode(arr):
     """
