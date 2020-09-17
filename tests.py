@@ -1,9 +1,9 @@
-import basic_functions as bf
-import graphing_functions as gf
-import file_processing_functions as fpf
-import table_functions as tf
-import vectorization_functions as vf
-import matrix_functions as mf
+import scripts.basic_functions as bf
+import scripts.graphing_functions as gf
+import scripts.file_processing_functions as fpf
+import scripts.table_functions as tf
+import scripts.vectorization_functions as vf
+import scripts.matrix_functions as mf
 
 def check(real, predicted, function_name):
     if(str(real) == str(predicted)):
