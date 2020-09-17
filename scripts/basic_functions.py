@@ -43,18 +43,12 @@ def types(arr):
 
 def highest_frequency(arr):
     """
-    highest_frequency(arr) returns an array of length 2
+    highest_frequency(arr) returns a tuple of the form ((items with most frequency), their frequency)
     This function looks for the number of occurrences of each value in the given array and returns the top results
-    Returned array has the structure: [value with highest frequency, number of occurrences of value]
     """
     dictionary = frequency(arr)
-    max_value = -1
-    max_key = ""
-    for a in dictionary:
-        if(dictionary[a] > max_value):
-            max_key = a
-            max_value = dictionary[a]
-    return [max_key, max_value]
+    max_value = max(dictionary.values())
+    return (tuple(key for key, value in dictionary.items() if value == max_value), max_value)
 
 def frequency(arr, cast=False):
     """
