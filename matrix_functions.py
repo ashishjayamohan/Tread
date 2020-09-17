@@ -1,23 +1,35 @@
 from itertools import tee
 
+
 def determinant(matrix, __len=None, __nocheck=False):
     if (not __nocheck) and len(matrix) != len(matrix[0]):
-        raise TypeError('Table must be a square')
+        raise TypeError("Table must be a square")
     else:
-        size = (__len or len(matrix))
+        size = __len or len(matrix)
         if size == 1:
             return list(matrix)[0][0]
         elif size == 2:
             matrixlist = list(matrix)
-            return matrixlist[0][0]*matrixlist[1][1]-matrixlist[1][0]*matrixlist[0][1]
+            return (
+                matrixlist[0][0] * matrixlist[1][1]
+                - matrixlist[1][0] * matrixlist[0][1]
+            )
         elif size == 3:
             matrixlist = list(matrix)
             ret = 0
             actual_size = len(matrixlist[0])
             for i in range(actual_size):
-                ret += matrixlist[0][i]*matrixlist[1][(i+1) % actual_size]*matrixlist[2][(i+2) % actual_size]
+                ret += (
+                    matrixlist[0][i]
+                    * matrixlist[1][(i + 1) % actual_size]
+                    * matrixlist[2][(i + 2) % actual_size]
+                )
             for i in range(actual_size):
-                ret -= matrixlist[2][i]*matrixlist[1][(i+1) % actual_size]*matrixlist[0][(i+2) % actual_size]
+                ret -= (
+                    matrixlist[2][i]
+                    * matrixlist[1][(i + 1) % actual_size]
+                    * matrixlist[0][(i + 2) % actual_size]
+                )
             return ret
         else:
             ret = 0
@@ -26,7 +38,9 @@ def determinant(matrix, __len=None, __nocheck=False):
                     element = matrix[0][i]
                     recurse_generator = (row[0:i] + row[i + 1 : size] for row in matrix)
                     next(recurse_generator)
-                    minor_determinant = determinant(recurse_generator, __len=len(matrix)-1, __nocheck=True)
+                    minor_determinant = determinant(
+                        recurse_generator, __len=len(matrix) - 1, __nocheck=True
+                    )
                     if i % 2 == 0:
                         ret += element * minor_determinant
                     else:
@@ -37,7 +51,11 @@ def determinant(matrix, __len=None, __nocheck=False):
                 new_iterators = tee(matrix, size)
                 for i in range(size):
                     element = start_row[i]
-                    minor_determinant = determinant((row[0:i] + row[i + 1 : size] for row in new_iterators[i]), __len=__len-1, __nocheck=True)
+                    minor_determinant = determinant(
+                        (row[0:i] + row[i + 1 : size] for row in new_iterators[i]),
+                        __len=__len - 1,
+                        __nocheck=True,
+                    )
                     if i % 2 == 0:
                         ret += element * minor_determinant
                     else:
@@ -46,7 +64,7 @@ def determinant(matrix, __len=None, __nocheck=False):
 
 
 def make_matrix(old_matrix):
-    new_matrix = [];
+    new_matrix = []
     if not (isinstance(old_matrix[0], list)):
         new_matrix = [[float(item) for item in old_matrix]]
     else:
@@ -55,6 +73,7 @@ def make_matrix(old_matrix):
             for y in range(len(old_matrix[x])):
                 new_matrix[x].append(float(old_matrix[x][y]))
     return new_matrix
+
 
 def multiply(matrix1, matrix2):
     new_matrix1 = make_matrix(matrix1)
@@ -76,7 +95,9 @@ def multiply(matrix1, matrix2):
 def element_wise_multiply(matrix1, matrix2):
     new_matrix1 = make_matrix(matrix1)
     new_matrix2 = make_matrix(matrix2)
-    if len(new_matrix1) != len(new_matrix2) or len(new_matrix1[0]) != len(new_matrix2[0]):
+    if len(new_matrix1) != len(new_matrix2) or len(new_matrix1[0]) != len(
+        new_matrix2[0]
+    ):
         raise TypeError(
             f"Cannot point-wise multiply matrices of the size {len(new_matrix1)} x {len(new_matrix1[0])} and {len(new_matrix2)} x {len(new_matrix2[0])}"
         )
@@ -86,6 +107,60 @@ def element_wise_multiply(matrix1, matrix2):
             result_matrix.append([])
             for y in range(len(new_matrix1[0])):
                 result_matrix[x].append(new_matrix1[x][y] * new_matrix2[x][y])
+    return result_matrix
+
+
+def add(matrix1, matrix2):
+    new_matrix1 = make_matrix(matrix1)
+    new_matrix2 = make_matrix(matrix2)
+    if len(new_matrix1) != len(new_matrix2) or len(new_matrix1[0]) != len(
+        new_matrix2[0]
+    ):
+        raise TypeError(
+            f"Cannot point-wise multiply matrices of the size {len(new_matrix1)} x {len(new_matrix1[0])} and {len(new_matrix2)} x {len(new_matrix2[0])}"
+        )
+    else:
+        result_matrix = []
+        for x in range(len(new_matrix1)):
+            result_matrix.append([])
+            for y in range(len(new_matrix1[0])):
+                result_matrix[x].append(new_matrix1[x][y] + new_matrix2[x][y])
+    return result_matrix
+
+
+def substract(matrix1, matrix2):
+    new_matrix1 = make_matrix(matrix1)
+    new_matrix2 = make_matrix(matrix2)
+    if len(new_matrix1) != len(new_matrix2) or len(new_matrix1[0]) != len(
+        new_matrix2[0]
+    ):
+        raise TypeError(
+            f"Cannot point-wise multiply matrices of the size {len(new_matrix1)} x {len(new_matrix1[0])} and {len(new_matrix2)} x {len(new_matrix2[0])}"
+        )
+    else:
+        result_matrix = []
+        for x in range(len(new_matrix1)):
+            result_matrix.append([])
+            for y in range(len(new_matrix1[0])):
+                result_matrix[x].append(new_matrix1[x][y] - new_matrix2[x][y])
+    return result_matrix
+
+
+def devide(matrix1, matrix2):
+    new_matrix1 = make_matrix(matrix1)
+    new_matrix2 = make_matrix(matrix2)
+    if len(new_matrix1) != len(new_matrix2) or len(new_matrix1[0]) != len(
+        new_matrix2[0]
+    ):
+        raise TypeError(
+            f"Cannot point-wise multiply matrices of the size {len(new_matrix1)} x {len(new_matrix1[0])} and {len(new_matrix2)} x {len(new_matrix2[0])}"
+        )
+    else:
+        result_matrix = []
+        for x in range(len(new_matrix1)):
+            result_matrix.append([])
+            for y in range(len(new_matrix1[0])):
+                result_matrix[x].append(new_matrix1[x][y] / new_matrix2[x][y])
     return result_matrix
 
 
