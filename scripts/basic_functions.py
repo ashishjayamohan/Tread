@@ -97,7 +97,8 @@ def mode(arr):
     Note that this function is different from the above determine_mode() function
     This returns the most common element in a given set
     """
-    return highest_frequency(arr)[0]
+    freqs = highest_frequency(arr)
+    return None if len(freqs[0]) > 1 else freqs[0][0]
 
 def length(arr):
     """
