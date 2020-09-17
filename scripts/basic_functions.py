@@ -105,8 +105,14 @@ def mode(arr):
     """
     return highest_frequency(arr)[0]
 
-def get_length(arr):
+def length(arr):
     """
     Returns the length of a given array
     """
     return len(arr)
+
+def pare_unique(arr):
+    """
+    Returns an array with all unique values in a given array
+    """
+    return list(set(arr))
