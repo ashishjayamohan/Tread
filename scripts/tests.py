@@ -94,6 +94,16 @@ def test_mode():
     check(bf.mode(mode3), 1, 'MODE - 4 elements')
     check(bf.mode(mode4), 1, 'MODE - Large dataset')
 
+def test_median():
+    median1 = [1]
+    median2 = [1,2,3]
+    median3 = [1,2,3,4]
+    median4 = [1,7,2,5,27,3] # 4
+    check(bf.median(median1), 1, 'MEDIAN - 1 element')
+    check(bf.median(median2), 2, 'MEDIAN - 3 elements')
+    check(bf.median(median3), 2.5, 'MEDIAN - 4 elements')
+    check(bf.median(median4), 4.0, 'MEDIAN - 6 elements, unordered')
+
 def run_all():
     print('Test #1')
     test_add()
@@ -117,6 +127,8 @@ def run_all():
     test_frequency()
     print('Test #11')
     test_mode()
+    print('Test #12')
+    test_median()
 
     print("----------------------------------")
     print("BEGINNING HISTOGRAM CHECK")
