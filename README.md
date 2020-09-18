@@ -14,6 +14,45 @@ To get started with Tread, first ensure that your computer has Python installed.
 ## Using Tread
 Once you have installed the Tread project source code on your computer and downloaded all necessary components, simply import whichever function script you require and you can begin using all the functions that are in those function scripts. For a general overview of how this works, see `test_program.py` for an example usage of the `add` method from `basic_functions.py`.
 
+## Tread's Functions
+Tread has an ever-growing list of functions that are stored in seperate files. Namely, these are `basic_functions`, `file_processing_functions`, `graphing_functions`, `matrix_functions`, `vectorization_functions`. Each one of these hasfunctions that are generally related to their script files' name.
+### basic_functions
+* add() - Takes the sum of all elements in an array
+* average() - Returns the average of a given array
+* types() - Returns the type of every element in a given array
+* highest_frequency() - Returns the value(s) and frequencies of the most frequent elements
+* frequency() - Returns a dictionary with every unique element in a given array and its respective frequency
+* determine_mode() - Assists in determining which mode is used for functions such as add()
+* median() - Returns the median of a given data set
+* mode() - Returns the numerical mode of a specific data set
+* length() - Returns the length of a given array
+* pare_unique() - Returns an array with only unique elements of a given array
+### file_processing_functions
+* read_csv() - Given a file path, will read comma seperated values
+* read_file() - Given a file path, will read lines of file with  custom delimiter
+* write_csv() - Takes a given matrix and writes to a given file path in CSV format
+* write_file() - Takes a given matrix and writes to a given file path with custom delimiter between elements
+### graphing_functions
+* graph_frequency_histograms() - Given an array, will graph a histogram
+* graph_scatter() - Given a list of X and Y coordinates, will graph a scatter plot
+### matrix_functions
+* determinant() - Returns the determinant of a given matrix
+* make_matrix() - Copies a given matrix into a new matrix
+* multiply() - Multiplies two given matrices together and returns resultant matrix
+* element_wise_multiply() - Multiplies every element in a given matrix with every element in another given matrix
+* add() - Adds together two given matrices and returns resultant matrix
+* subtract() - Subtracts one matrix from another and returns resultant matrix
+* divide() - Divides one given matrix by another given matrix and returns resultant matrix
+* add_column_values() - Adds a new column to a given matrix given the new columns' values
+* remove_column() - Removes a certain indexed column from a given matrix
+* extract_column() - Returns an array with given columns' values from a given matrix
+* vector_function_column() - Given a table, function, and specified index, will return the function applied on elements in column
+### vectorization_functions
+* cumulative_sum() - Returns an array with every element having the sum of all elements prior
+* skew() - Returns the skew of a given data set
+* vector_functions() - Given an array and a function, will perform function on every element in array
+* cast_all() - Given an array and a type, will cast all values of array into given type
+
 ## Contributions
 Please see `GUIDELINES.md`.
 
