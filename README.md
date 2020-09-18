@@ -16,3 +16,6 @@ Once you have installed the Tread project source code on your computer and downl
 
 ## Contributions
 Please see `GUIDELINES.md`.
+
+## Improvements to Tread
+As with every other project, Tread will continue to evolve over time. If you have questions regarding the project or want to add something new, [email me](mailto:ashishjayamohan@gmail.com).
