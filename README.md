@@ -5,10 +5,10 @@
 ![Stars](https://img.shields.io/github/stars/ashishjayamohan/Tread)
 ![License](https://img.shields.io/github/license/ashishjayamohan/Tread)
 
-### What is Tread?
+## What is Tread?
 Tread is a data science package built in Python 3 that has functions that are useful for every data scientist.
 
-### How do I work with Tread?
+## How do I work with Tread?
 To get started with Tread, first ensure that your computer has Python installed. You can check this by typing `python --version` in your command line. Once you have Python installed, install pip (`pip install pip`) and instal MatPlotLib (`pip install matplotlib`). Now download the source code for this project on to your computer. You are now ready to start using Tread!
 
 ## Using Tread
