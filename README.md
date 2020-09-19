@@ -56,10 +56,13 @@ Tread has an ever-growing list of functions that are stored in seperate files. N
 * vector_functions() - Given an array and a function, will perform function on every element in array
 * cast_all() - Given an array and a type, will cast all values of array into given type
 
+## Tests
+We make our best effort to add tests to `tests.py` in the `scripts` folder as frequently as possible. By running this Python script file, you can run all the tests to check that Tread's source code is working correctly and it is properly configured on your computer. If you run in to any problems, please either file an issue on Github, make a Pull Request if you can solve the issue, or [email me](mailto:ashishjayamohan@gmail.com).
+
 ## Contributions
 Please see `GUIDELINES.md`.
 
 ## Improvements to Tread
-As with every other project, Tread will continue to evolve over time. If you have questions regarding the project or want to add something new, [email me](mailto:ashishjayamohan@gmail.com). You can also see what we're working on currently on our [Trello board](https://trello.com/b/0RSsd0EO/tread).
+As with every other project, Tread will continue to evolve over time. If you have questions regarding the project or want to add something new, [email me](mailto:ashishjayamohan@gmail.com). You can also see what we're working on currently on our [Trello board](https://trello.com/b/0RSsd0EO/tread). Thank you for helping make Tread better for everyone!
 
 ashishjayamohan
