@@ -32,6 +32,7 @@ def average(arr, mode = "mixed"):
     Once again, the modes of add() can be used here to denote what the type of the array is
     The function below, determine_mode(arr) can be used to determine the correct mode for your array
     """
+    if len(arr) == 0: return 0.0
     return add(arr, mode)/len(arr)
 
 def types(arr):
@@ -46,6 +47,7 @@ def highest_frequency(arr):
     highest_frequency(arr) returns a tuple of the form ((items with most frequency), their frequency)
     This function looks for the number of occurrences of each value in the given array and returns the top results
     """
+    if len(arr) == 0: return None
     dictionary = frequency(arr)
     max_value = max(dictionary.values())
     return (tuple(key for key, value in dictionary.items() if value == max_value), max_value)
@@ -71,7 +73,9 @@ def determine_mode(arr):
     elements are of unparseable types
     """
     dictionary = frequency(types(arr))
-    if(len(dictionary) == 1):
+    if len(dictionary) == 0:
+        return None
+    elif(len(dictionary) == 1):
         if("int" in str(dictionary.keys())):
             return "int"
         elif("float" in str(dictionary.keys())):
@@ -99,7 +103,9 @@ def quartiles(arr):
     If three values are provided, the result will be (first, first, second, third, third).
     Format: (minimum, first quartile, median, third quartile, maximum)
     '''
-    if (len(arr) == 1):
+    if len(arr) == 0:
+        return None
+    elif (len(arr) == 1):
         return (arr[0], arr[0], arr[0], arr[0], arr[0])
     elif (len(arr) == 2):
         sample = sorted(arr)
