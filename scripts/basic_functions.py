@@ -32,6 +32,7 @@ def average(arr, mode = "mixed"):
     Once again, the modes of add() can be used here to denote what the type of the array is
     The function below, determine_mode(arr) can be used to determine the correct mode for your array
     """
+    if len(arr) == 0: return 0.0
     return add(arr, mode)/len(arr)
 
 def types(arr):
