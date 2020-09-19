@@ -186,7 +186,10 @@ def remove_column(table, index):
     Removes a column from a given table given the column index
     """
     for j in table:
-        j.pop(index)
+        try:
+            j.pop(index)
+        except IndexError:
+            raise IndexError('Index outside of table')
     return table
 
 
