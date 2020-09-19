@@ -200,7 +200,10 @@ def extract_column(table, index):
     """
     Returns the values of a specific column in a table given the column index
     """
-    return [j[index] for j in table]
+    try:
+        return [j[index] for j in table]
+    except IndexError:
+        raise IndexError('Index outside of table')
 
 
 def vector_function_column(table, function, index):
