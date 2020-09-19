@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="512"
+   height="512"
+   viewBox="0 0 135.46667 135.46667"
+   version="1.1"
+   id="svg8">
+  <defs
+     id="defs2">
+    <pattern
+       xlink:href="#Packedcircles"
+       id="pattern4583"
+       patternTransform="matrix(49.501065,47.048863,-47.048864,49.501066,-2.1588695,-17.270956)" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="1"
+       height="1.73205080756"
+       patternTransform="translate(0,0) scale(10,10)"
+       id="Packedcircles">
+      <circle
+         style="fill:black;stroke:none"
+         cx="0"
+         cy="0.5"
+         r="0.5"
+         id="circle3670" />
+      <circle
+         style="fill:black;stroke:none"
+         cx="1"
+         cy="0.5"
+         r="0.5"
+         id="circle3672" />
+      <circle
+         style="fill:black;stroke:none"
+         cx="0.5"
+         cy="1.36602540378"
+         r="0.5"
+         id="circle3674" />
+      <circle
+         style="fill:black;stroke:none"
+         cx="0.5"
+         cy="-0.366025403784"
+         r="0.5"
+         id="circle3676" />
+    </pattern>
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <path
+       id="path838"
+       style="font-variation-settings:'ital' 0.67, 'wght' 532;opacity:1;fill:url(#pattern4583);fill-opacity:1;stroke:none;stroke-width:4.64126;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="M 269.18359,46.052734 A 223.33012,223.33012 0 0 0 46.052734,269.38281 223.33012,223.33012 0 0 0 269.38281,492.71289 223.33012,223.33012 0 0 0 492.71289,269.38281 223.33012,223.33012 0 0 0 269.38281,46.052734 a 223.33012,223.33012 0 0 0 -0.19922,0 z m 35.98829,99.435546 a 159.94211,159.94211 0 0 1 0.25781,0 159.94211,159.94211 0 0 1 159.9414,159.94141 159.94211,159.94211 0 0 1 -159.9414,159.9414 159.94211,159.94211 0 0 1 -159.94141,-159.9414 159.94211,159.94211 0 0 1 159.6836,-159.94141 z"
+       transform="scale(0.26458333)" />
+  </g>
+</svg>

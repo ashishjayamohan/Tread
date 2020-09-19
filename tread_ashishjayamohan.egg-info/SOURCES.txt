@@ -1,6 +1,0 @@
-README.md
-setup.py
-tread_ashishjayamohan.egg-info/PKG-INFO
-tread_ashishjayamohan.egg-info/SOURCES.txt
-tread_ashishjayamohan.egg-info/dependency_links.txt
-tread_ashishjayamohan.egg-info/top_level.txt
