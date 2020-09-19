@@ -81,11 +81,11 @@ def determine_mode(arr):
     else:
         return "mixed"
 
-def median(arr):
+def median(arr, __nosort=False):
     """
     Returns the median of a given array or the middle element of an array
     """
-    sample = sorted(arr)
+    sample = sorted(arr) if not __nosort else arr
     if(len(sample) % 2 == 1):
         return sample[len(sample) // 2]
     else:
