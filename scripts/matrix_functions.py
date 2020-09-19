@@ -173,6 +173,8 @@ def add_column_values(table, column_title, column_values):
     Adds a column to a specific table
     Note that you must include a column title and the values of the column
     """
+    if len(table) == 0:
+        raise TypeError('Empty table')
     table[0].append(column_title)
     for j in range(1, len(table)):
         table[j].append(column_values[j])
