@@ -212,5 +212,8 @@ def vector_function_column(table, function, index):
     It is necessary to refer to the column index and the function as a function pointer
     """
     for j in range(len(table)):
-        table[j][index] = function(table[j][index])
+        try:
+            table[j][index] = function(table[j][index])
+        except IndexError:
+            raise IndexError('Index outside of table')
     return table
