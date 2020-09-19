@@ -17,6 +17,8 @@ def skew(arr, mode = "float"):
     This function calculates the skew of a given array
     Note that the mode must be specified as the automatic mode is float in this case
     """
+    if len(arr) == 0:
+        raise ValueError('Empty dataset')
     average = bf.average(arr, mode)
     answer = (bf.add([(average - i) ** 2 for i in arr], mode) / len(arr)) ** (1/2)
     return answer
