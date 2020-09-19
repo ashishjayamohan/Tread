@@ -73,7 +73,9 @@ def determine_mode(arr):
     elements are of unparseable types
     """
     dictionary = frequency(types(arr))
-    if(len(dictionary) == 1):
+    if len(dictionary) == 0:
+        return None
+    elif(len(dictionary) == 1):
         if("int" in str(dictionary.keys())):
             return "int"
         elif("float" in str(dictionary.keys())):
