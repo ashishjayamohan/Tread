@@ -91,6 +91,26 @@ def median(arr, __nosort=False):
     else:
         return (sample[len(sample)//2 - 1] + sample[len(sample)//2]) / 2
 
+def quartiles(arr):
+    '''
+    Returns the minimum and maximum, the median, and the first and third quartiles.
+    If only one value is provided, that value is used for all of the outputs.
+    If two values are provided, the result will be (first, None, average, None, second).
+    If three values are provided, the result will be (first, first, second, third, third).
+    Format: (minimum, first quartile, median, third quartile, maximum)
+    '''
+    if (len(arr) == 1):
+        return (arr[0], arr[0], arr[0], arr[0], arr[0])
+    elif (len(arr) == 2):
+        sample = sorted(arr)
+        return (sample[0], None, (sample[0] + sample[1]) / 2, None, sample[1])
+    elif (len(arr) == 3):
+        sample = sorted(arr)
+        return (sample[0], sample[0], sample[1], sample[2], sample[2])
+    else:
+        sample = sorted(arr)
+        return (sample[0], median(sample[:len(sample)//2], __nosort=True), median(sample, __nosort=True), median(sample[(len(sample)+1)//2:], __nosort=True), sample[len(sample) - 1])
+
 def mode(arr):
     """
     Returns the mode of a given array

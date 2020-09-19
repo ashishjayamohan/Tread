@@ -104,6 +104,18 @@ def test_median():
     check(bf.median(median3), 2.5, 'MEDIAN - 4 elements')
     check(bf.median(median4), 4.0, 'MEDIAN - 6 elements, unordered')
 
+def test_quartiles():
+    quartiles1 = [1]
+    quartiles2 = [1,2]
+    quartiles3 = [1,2,3]
+    quartiles4 = [1,2,3,4,5,6]
+    quartiles5 = [1,7,37,2,4,73,9]
+    check(bf.quartiles(quartiles1), (1,1,1,1,1), 'QUARTILES - 1 element')
+    check(bf.quartiles(quartiles2), (1,None,1.5,None,2), 'QUARTILES - 2 elements')
+    check(bf.quartiles(quartiles3), (1,1,2,3,3), 'QUARTILES - 3 elements')
+    check(bf.quartiles(quartiles4), (1,2,3.5,5,6), 'QUARTILES - Even number of elements')
+    check(bf.quartiles(quartiles5), (1,2,7,37,73), 'QUARTILES - Odd number of elements')
+
 def run_all():
     print('Test #1')
     test_add()
@@ -129,6 +141,8 @@ def run_all():
     test_mode()
     print('Test #12')
     test_median()
+    print('Test #13')
+    test_quartiles()
 
     print("----------------------------------")
     print("BEGINNING HISTOGRAM CHECK")
