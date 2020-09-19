@@ -117,7 +117,7 @@ def add(matrix1, matrix2):
         new_matrix2[0]
     ):
         raise TypeError(
-            f"Cannot point-wise multiply matrices of the size {len(new_matrix1)} x {len(new_matrix1[0])} and {len(new_matrix2)} x {len(new_matrix2[0])}"
+            f"Cannot add matrices of the size {len(new_matrix1)} x {len(new_matrix1[0])} and {len(new_matrix2)} x {len(new_matrix2[0])}"
         )
     else:
         result_matrix = []
@@ -128,14 +128,14 @@ def add(matrix1, matrix2):
     return result_matrix
 
 
-def substract(matrix1, matrix2):
+def subtract(matrix1, matrix2):
     new_matrix1 = make_matrix(matrix1)
     new_matrix2 = make_matrix(matrix2)
     if len(new_matrix1) != len(new_matrix2) or len(new_matrix1[0]) != len(
         new_matrix2[0]
     ):
         raise TypeError(
-            f"Cannot point-wise multiply matrices of the size {len(new_matrix1)} x {len(new_matrix1[0])} and {len(new_matrix2)} x {len(new_matrix2[0])}"
+            f"Cannot subtract matrices of the size {len(new_matrix1)} x {len(new_matrix1[0])} and {len(new_matrix2)} x {len(new_matrix2[0])}"
         )
     else:
         result_matrix = []
@@ -146,14 +146,14 @@ def substract(matrix1, matrix2):
     return result_matrix
 
 
-def devide(matrix1, matrix2):
+def divide(matrix1, matrix2):
     new_matrix1 = make_matrix(matrix1)
     new_matrix2 = make_matrix(matrix2)
     if len(new_matrix1) != len(new_matrix2) or len(new_matrix1[0]) != len(
         new_matrix2[0]
     ):
         raise TypeError(
-            f"Cannot point-wise multiply matrices of the size {len(new_matrix1)} x {len(new_matrix1[0])} and {len(new_matrix2)} x {len(new_matrix2[0])}"
+            f"Cannot divide matrices of the size {len(new_matrix1)} x {len(new_matrix1[0])} and {len(new_matrix2)} x {len(new_matrix2[0])}"
         )
     else:
         result_matrix = []
