@@ -66,6 +66,8 @@ def determinant(matrix, __len=None, __nocheck=False):
 
 
 def make_matrix(old_matrix):
+    if len(old_matrix) == 0:
+        raise TypeError('Empty matrix')
     new_matrix = []
     if not (isinstance(old_matrix[0], list)):
         new_matrix = [[float(item) for item in old_matrix]]
