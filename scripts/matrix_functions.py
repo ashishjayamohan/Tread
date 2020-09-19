@@ -189,7 +189,10 @@ def remove_column(table, index):
         try:
             j.pop(index)
         except IndexError:
-            raise IndexError('Index outside of table')
+            if (len(j) == 0):
+                raise TypeError('Empty row')
+            else:
+                raise IndexError('Index outside of table')
     return table
 
 
