@@ -36,6 +36,8 @@ Tread has an ever-growing list of functions that are stored in seperate files. N
 ### graphing_functions
 * graph_frequency_histograms() - Given an array, will graph a histogram
 * graph_scatter() - Given a list of X and Y coordinates, will graph a scatter plot
+* midpoint() - Given two points, returns the coordinates of the midpoint of the line segment
+* distance() - Returns the distance between two given points
 ### matrix_functions
 * determinant() - Returns the determinant of a given matrix
 * make_matrix() - Copies a given matrix into a new matrix
