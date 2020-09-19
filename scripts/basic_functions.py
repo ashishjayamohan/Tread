@@ -103,7 +103,9 @@ def quartiles(arr):
     If three values are provided, the result will be (first, first, second, third, third).
     Format: (minimum, first quartile, median, third quartile, maximum)
     '''
-    if (len(arr) == 1):
+    if len(arr) == 0:
+        return None
+    elif (len(arr) == 1):
         return (arr[0], arr[0], arr[0], arr[0], arr[0])
     elif (len(arr) == 2):
         sample = sorted(arr)
