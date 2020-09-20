@@ -55,9 +55,13 @@ Tread has an ever-growing list of functions that are stored in seperate files. N
 * skew() - Returns the skew of a given data set
 * vector_functions() - Given an array and a function, will perform function on every element in array
 * cast_all() - Given an array and a type, will cast all values of array into given type
+### math_functions
+* add_num() - Given two numbers `a` and `b`, this function will return the sum of these two numbers
+* subtract_num() - Given two numbers `a` and `b`, this function will return `a-b`
+* abs_diff() - Given two numbers `a` and `b`, this function will return the absoluted difference of the two numbers
 
 ## Tests
-We make our best effort to add tests to `tests.py` in the `scripts` folder as frequently as possible. By running this Python script file, you can run all the tests to check that Tread's source code is working correctly and it is properly configured on your computer. If you run in to any problems, please either file an issue on Github, make a Pull Request if you can solve the issue, or [email me](mailto:ashishjayamohan@gmail.com).
+We make our best effort to add tests to `tests.py` in the `scripts` folder as frequently as possible. By running this Python script file, you can run all the tests to check that Tread's source code is working correctly and it is properly configured on your computer. If you run in to any problems, please either file an issue on Github, make a Pull Request if you can solve the issue, or [email me](mailto:ashishjayamohan@gmail.com). Alternatively, if you find a loophole in our function by implementing a test, please submit your Pull Request and make sure to [contact me](mailto:ashishjayamohan@gmail.com).
 
 ## Contributions
 Please see `GUIDELINES.md`.
