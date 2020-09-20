@@ -9,13 +9,16 @@ def check(real, predicted, function_name):
         print('  ✓ ' + function_name + ' PASSED')
     else:
         print('  ✖ ' + function_name + ' FAILED')
-        print('Recalibrating, recalibrating....')
+        print('Recalibrate System')
+        print("-----------------------------------------")
 
 def test_add():
+    # ADD - Vector functions version
     sample_arr = [5,3,1,4,2]
     check(bf.add(sample_arr, mode = "int"), 15, "ADD")
 
 def test_add_advanced():
+    # ADD - Vector functions version
     sample_arr = ["5",3.0,1,"4",2.0]
     check(bf.add(sample_arr, mode = "mixed"), 15.0, "ADD - ADVANCED")
 
@@ -24,10 +27,12 @@ def test_highest_frequency():
     check(bf.highest_frequency(sample_arr), [5,3], "HIGHEST_FREQUENCY")
 
 def test_determine_mode():
+    #Not numerical mode
     sample_arr = ["5",3.0,1,"4",2.0]
     check(bf.determine_mode(sample_arr), "mixed", "DETERMINE_MODE")
 
 def test_determine_mode_advanced():
+    #Not numerical mode
     sample_arr = [5,3,1,4,2]
     check(bf.determine_mode(sample_arr), "int", "DETERMINE_MODE - ADVANCED")
 
@@ -152,4 +157,9 @@ def run_all():
     test_graph_scatter()
     print("SCATTER PLOT CHECK COMPLETE")
 
+"""
+This below function will run all given tests
+Naturally, by running this file, this function will be called
+If you receive an error, please create an issue on the Github page
+"""
 run_all()
