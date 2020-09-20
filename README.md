@@ -1,4 +1,4 @@
-# Tread 
+# Tread
 ![Logo](https://raw.githubusercontent.com/ashishjayamohan/Tread/logos/icons/logo.svg)
 ## A python data science package for people who just want to get on with life.
 ![Issues Shield](https://img.shields.io/github/issues/ashishjayamohan/Tread)
@@ -64,7 +64,7 @@ Tread has an ever-growing list of functions that are stored in seperate files. N
 We make our best effort to add tests to `tests.py` in the `scripts` folder as frequently as possible. By running this Python script file, you can run all the tests to check that Tread's source code is working correctly and it is properly configured on your computer. If you run in to any problems, please either file an issue on Github, make a Pull Request if you can solve the issue, or [email me](mailto:ashishjayamohan@gmail.com). Alternatively, if you find a loophole in our function by implementing a test, please submit your Pull Request and make sure to [contact me](mailto:ashishjayamohan@gmail.com).
 
 ## Contributions
-Please see `GUIDELINES.md`.
+Please see `GUIDELINES.md` for instructions for contributing. Thank you for helping make Tread better!
 
 ## Improvements to Tread
 As with every other project, Tread will continue to evolve over time. If you have questions regarding the project or want to add something new, [email me](mailto:ashishjayamohan@gmail.com). You can also see what we're working on currently on our [Trello board](https://trello.com/b/0RSsd0EO/tread). Thank you for helping make Tread better for everyone!

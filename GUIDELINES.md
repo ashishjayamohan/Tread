@@ -24,7 +24,7 @@ Even though GitHub shows that annoying message when a branch had recent commits,
 
 ### PRs should be merged by the person in charge of the compare branch, unless a review was requested
 
-Though a merge can be undone, it's messy and tarnishes the reflog. Instead, the person responsible for the compare branch (who should have authored the PR as well; see above) should be the one to merge it, to prevent unfinished/untested work from entering the master branch.
+Though a merge can be undone, it's messy and tarnishes the `reflog`. Instead, the person responsible for the compare branch (who should have authored the PR as well; see above) should be the one to merge it, to prevent unfinished/untested work from entering the master branch.
 
 This guideline does not apply when a review was requested. Since reviews should only be requested when the author feels that the PR is ready to be merged, if all of the reviewers have approved, the PR should be merged as soon as possible.
 
@@ -37,5 +37,9 @@ Additionally, please notify your teammates when you delete a branch so they can 
 ### NEVER FORCE-PUSH
 
 Force-pushing is never the answer. Everyone else in your team will inevitably hate you for it. Instead, use `git push --force-with-lease`. This will fail if your force-push would override others' work. If it does fail, you need to consider if what you're trying to do is really necessary.
+
+### Formatting
+
+When writing new functions or new pieces of code, please follow these general guidelines. Firstly, please separate your code logically. Generally, this is well-defined by taking input, processing input, and returning the said answer. Secondly, please make sure to not include randomized comments but to include a singular multi-line comment at the header of your function to ensure people parsing through the code can see exactly what your function does. Thirdly, please **write tests** before making a Pull Request.
 
 Thank you for reading through these and helping to make Tread better for all users!
