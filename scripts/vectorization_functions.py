@@ -42,3 +42,9 @@ def cast_all(arr, final_type = "int"):
         return [str(i) for i in arr]
     else:
         raise TypeError('Cast Failed - Incorrect data type')
+
+def get_keys(dictionary):
+    """
+    Given a dictionary, this function returns all unique keys from this dictionary
+    """
+    return dictionary.keys()
