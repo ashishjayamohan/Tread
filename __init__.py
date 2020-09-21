@@ -1,5 +1,5 @@
 print("----------------------------------------------")
 print("Tread Python Package - Data Science ----------")
 print("Made By: Ashish Jayamohan --------------------")
-print("2 + 2 = 4 ------------------------------------")
+print("Get Started By Running tests.py --------------")
 print("----------------------------------------------")
