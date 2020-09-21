@@ -59,3 +59,33 @@ def choose(a, b):
     Given two numbers, this function will return the first number choose the second number
     """
     return (factorial(a))/(factorial(b)*factorial(abs(a-b)))
+
+def length_num(n):
+    """
+    Given a number, this function will return the number of digits in the number
+    """
+    return len(str(n))
+
+def echo(n):
+    """
+    Bounce a string-coverted numerical back
+    """
+    return str(n)
+
+def out(n):
+    """
+    Prints a given number to the output stream
+    """
+    print(str(n))
+
+def percent(a, b):
+    """
+    Given a and b, this function returns a% of b
+    """
+    return (a/100)*b
+
+def digit_arr(n):
+    """
+    Given a number, this function returns an array with the digits of the given number
+    """
+    return list(str(n))

@@ -3,6 +3,7 @@ import graphing_functions as gf
 import file_processing_functions as fpf
 import vectorization_functions as vf
 import matrix_functions as mf
+import math_functions as math
 
 def check(real, predicted, function_name):
     if(str(real) == str(predicted)):
@@ -90,6 +91,7 @@ def test_frequency():
     check(bf.frequency(freq4), { 64214.0: 2, -15213: 1, '1563': 1}, 'FREQUENCY - Large inputs')
 
 def test_mode():
+    # True numerical mode
     mode1 = [1]
     mode2 = [1,2,3]
     mode3 = [1,1,2,3]
@@ -121,6 +123,13 @@ def test_quartiles():
     check(bf.quartiles(quartiles4), (1,2,3.5,5,6), 'QUARTILES - Even number of elements')
     check(bf.quartiles(quartiles5), (1,2,7,37,73), 'QUARTILES - Odd number of elements')
 
+def test_add_num():
+    check(math.add_num(5, 4), 9, 'ADD_NUM - Integer 1')
+    check(math.add_num(9, 130), 139, 'ADD_NUM - Integer 2')
+    check(math.add_num(1.0, 0.5), 1.5, 'ADD_NUM - Float 1')
+    check(math.add_num(1.4, 0.1), 1.5, 'ADD_NUM - Float 2')
+    check(math.add_num(1, 0.5), 1.5, 'ADD_NUM - Integer & Float')
+
 def run_all():
     print('Test #1')
     test_add()
@@ -148,6 +157,8 @@ def run_all():
     test_median()
     print('Test #13')
     test_quartiles()
+    print('Test #14')
+    test_add_num()
 
     print("----------------------------------")
     print("BEGINNING HISTOGRAM CHECK")
