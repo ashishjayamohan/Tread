@@ -67,7 +67,7 @@ def determinant(matrix, __len=None, __nocheck=False):
 
 def make_matrix(old_matrix):
     if len(old_matrix) == 0:
-        raise TypeError('Empty matrix')
+        raise TypeError("Empty matrix")
     new_matrix = []
     if not (isinstance(old_matrix[0], list)):
         new_matrix = [[float(item) for item in old_matrix]]
@@ -174,7 +174,7 @@ def add_column_values(table, column_title, column_values):
     Note that you must include a column title and the values of the column
     """
     if len(table) == 0:
-        raise TypeError('Empty table')
+        raise TypeError("Empty table")
     table[0].append(column_title)
     for j in range(1, len(table)):
         table[j].append(column_values[j])
@@ -189,10 +189,10 @@ def remove_column(table, index):
         try:
             j.pop(index)
         except IndexError:
-            if (len(j) == 0):
-                raise TypeError('Empty row')
+            if len(j) == 0:
+                raise TypeError("Empty row")
             else:
-                raise IndexError('Index outside of table')
+                raise IndexError("Index outside of table")
     return table
 
 
@@ -203,7 +203,7 @@ def extract_column(table, index):
     try:
         return [j[index] for j in table]
     except IndexError:
-        raise IndexError('Index outside of table')
+        raise IndexError("Index outside of table")
 
 
 def vector_function_column(table, function, index):
@@ -215,5 +215,5 @@ def vector_function_column(table, function, index):
         try:
             table[j][index] = function(table[j][index])
         except IndexError:
-            raise IndexError('Index outside of table')
+            raise IndexError("Index outside of table")
     return table
