@@ -1,5 +1,5 @@
 # Tread
-![Logo](https://raw.githubusercontent.com/ashishjayamohan/Tread/logos/icons/logo.svg)
+![Logo](https://raw.githubusercontent.com/ashishjayamohan/Tread/master/icons/logo.svg)
 ## A python data science package for people who just want to get on with life.
 ![Issues Shield](https://img.shields.io/github/issues/ashishjayamohan/Tread)
 ![Forks](https://img.shields.io/github/forks/ashishjayamohan/Tread)
