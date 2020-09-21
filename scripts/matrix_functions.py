@@ -2,7 +2,7 @@ from itertools import tee
 
 
 def determinant(matrix, __len=None, __nocheck=False):
-    if (len(matrix) == 0):
+    if type(matrix) == list and len(matrix) == 0:
         return 1
     elif (not __nocheck) and len(matrix) != len(matrix[0]):
         raise TypeError("Table must be a square")
