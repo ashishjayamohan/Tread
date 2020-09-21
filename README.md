@@ -16,7 +16,7 @@ To get started with Tread, first ensure that your computer has Python installed.
 Once you have installed the Tread project source code on your computer and downloaded all necessary components, simply import whichever function script you require and you can begin using all the functions that are in those function scripts. For a general overview of how this works, see `test_program.py` for an example usage of the `add` method from `basic_functions.py`.
 
 ## Tread's Functions
-Tread has an ever-growing list of functions that are stored in seperate files. Namely, these are `basic_functions`, `file_processing_functions`, `graphing_functions`, `matrix_functions`, `vectorization_functions`. Each one of these hasfunctions that are generally related to their script files' name.
+Tread has an ever-growing list of functions that are stored in seperate files. Namely, these are `basic_functions`, `file_processing_functions`, `graphing_functions`, `matrix_functions`, `math_functions`, and `vectorization_functions`. Each one of these has functions that are generally related to their script files' name.
 ### basic_functions
 * add() - Takes the sum of all elements in an array
 * average() - Returns the average of a given array
