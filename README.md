@@ -1,5 +1,5 @@
 # Tread
-![Logo](https://raw.githubusercontent.com/ashishjayamohan/Tread/logos/icons/logo.svg)
+![Logo](https://raw.githubusercontent.com/ashishjayamohan/Tread/master/icons/logo.svg)
 ## A python data science package for people who just want to get on with life.
 ![Issues Shield](https://img.shields.io/github/issues/ashishjayamohan/Tread)
 ![Forks](https://img.shields.io/github/forks/ashishjayamohan/Tread)
@@ -68,5 +68,8 @@ Please see `GUIDELINES.md` for instructions for contributing. Thank you for help
 
 ## Improvements to Tread
 As with every other project, Tread will continue to evolve over time. If you have questions regarding the project or want to add something new, [email me](mailto:ashishjayamohan@gmail.com). You can also see what we're working on currently on our [Trello board](https://trello.com/b/0RSsd0EO/tread). Thank you for helping make Tread better for everyone!
+
+## Website
+We have a simple website for the project's overview. Check it out [here](https://ashishjayamohan.github.io/tread.web/).
 
 ashishjayamohan
