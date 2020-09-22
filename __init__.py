@@ -1,5 +1,6 @@
 print("----------------------------------------------")
 print("Tread Python Package - Data Science ----------")
 print("Made By: Ashish Jayamohan --------------------")
-print("2 + 2 = 4 ------------------------------------")
+print("------------------------------- Setup Complete")
+print("------------------------ All Packages Imported")
 print("----------------------------------------------")
