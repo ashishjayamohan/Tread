@@ -1,4 +1,4 @@
-import basic_functions as bf
+import scripts.basic_functions as bf
 
 def cumulative_sum(arr):
     """

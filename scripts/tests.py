@@ -1,11 +1,3 @@
-import basic_functions as bf
-import graphing_functions as gf
-import file_processing_functions as fpf
-import vectorization_functions as vf
-import matrix_functions as mf
-import math_functions as math
-
-
 def check(real, predicted, function_name):
     if str(real) == str(predicted):
         print("  ✓ " + function_name + " PASSED")
@@ -14,6 +6,18 @@ def check(real, predicted, function_name):
         print("Recalibrate System")
         print("-----------------------------------------")
 
+from os import environ
+
+import scripts.basic_functions as bf
+if not hasattr(environ, 'githubaction'):
+    import scripts.graphing_functions as gf
+    skip_graphic = False
+else:
+    gf = type('gf_shim', (), {'__getattr__': lambda *_, **__: lambda *_, **__: None })()
+    skip_graphic = False
+import scripts.vectorization_functions as vf
+import scripts.matrix_functions as mf
+import scripts.math_functions as math
 
 def test_add():
     # ADD - Vector functions version

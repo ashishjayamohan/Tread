@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-import basic_functions as bf
+import scripts.basic_functions as bf
 
 def graph_frequency_histogram(arr, bar_color='green', title='Graph of Frequencies'):
     """
