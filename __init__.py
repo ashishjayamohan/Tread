@@ -1,5 +1,0 @@
-print("----------------------------------------------")
-print("Tread Python Package - Data Science ----------")
-print("Made By: Ashish Jayamohan --------------------")
-print("Get Started By Running tests.py --------------")
-print("----------------------------------------------")
