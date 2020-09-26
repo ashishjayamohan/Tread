@@ -4,7 +4,7 @@ Please keep these guidelines for contributing to Tread to make sure that our pro
 
 ## Keep Master Clean
 
-No one likes constantly rebasing their branches when code changes in the master branch. Direct commits to the master branch should only be non–code related.
+No one likes constantly rebasing their branches when code changes in the master branch (`master`). Direct commits to the master branch should only be non–code related.
 
 ## Intentful Branches
 
@@ -34,13 +34,13 @@ Having extraneous branches that have already been merged adds clutter to the Bra
 
 Additionally, please notify your teammates when you delete a branch so they can delete it locally. It's confusing, especially for new Git users, to have branches that aren't synced with remote.
 
-## NEVER FORCE-PUSH
+## Don't Force Push
 
 Force-pushing is never the answer. Everyone else in your team will inevitably hate you for it. Instead, use `git push --force-with-lease`. This will fail if your force-push would override others' work. If it does fail, you need to consider if what you're trying to do is really necessary.
 
 ## Formatting
 
-When writing new functions or new pieces of code, please follow these general guidelines. Firstly, please separate your code logically. Generally, this is well-defined by taking input, processing input, and returning the said answer. Secondly, please make sure to not include randomized comments but to include a singular multi-line comment at the header of your function to ensure people parsing through the code can see exactly what your function does. Thirdly, please **write tests** before making a Pull Request.
+When writing new functions or new pieces of code, please follow these general guidelines. Firstly, please separate your code logically. Generally, this is well-defined by taking input, processing input, and returning the said answer. Secondly, please make sure to not include randomized comments but to include a singular multi-line comment at the header of your function to ensure people parsing through the code can see exactly what your function does. Thirdly, please **write tests** before making a Pull Request. Tests should be written in `tests.py`
 
 ## Grammatical Errors
 We understand that grammatical errors happen. In fact, you may even see some in our code. However, we ask that if you do, you make a Pull Request with your changes to fix this. If you write a new code snippet or make corrections to existing code snippets, please try to ensure that it is free of any errors to the best of your ability. Thank you!
