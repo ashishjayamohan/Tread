@@ -24,4 +24,4 @@ jobs:
           pip install pipenv
           cd $GITHUB_WORKSPACE
           pipenv install --dev
-          pipenv run 'pocha tests.py'
+          pipenv run pocha tests.py
