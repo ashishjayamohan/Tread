@@ -21,6 +21,7 @@ jobs:
 
       - name: Install Dependencies and Run Tests
         run: |
+          pip install pipenv
           cd $GITHUB_WORKSPACE
           pipenv install
           pipenv shell 'pocha tests.py'
