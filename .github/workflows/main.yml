@@ -1,0 +1,26 @@
+name: Continuous Integration with Pocha
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies and Run Tests
+        run: |
+          cd $GITHUB_WORKSPACE
+          pipenv install
+          pipenv shell 'pocha tests.py'
